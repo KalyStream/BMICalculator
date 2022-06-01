@@ -8,7 +8,7 @@
 import UIKit
 
 
-class MainViewController: UIViewController{
+final class MainViewController: UIViewController{
 
     //MARK: - Creating IBOutlets and attributes of MainViewController.
     @IBOutlet weak var femaleButton: UIButton!

@@ -9,7 +9,7 @@ import UIKit
 
 
 
-class ResultViewController: UIViewController {
+final class ResultViewController: UIViewController {
 
     //MARK: - Creating IBOutlets and attributes of ResultViewController
     @IBOutlet weak var resultImageView: UIImageView!

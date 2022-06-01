@@ -7,7 +7,7 @@
 
 import UIKit
 
-class IntroViewController: UIViewController {
+final class IntroViewController: UIViewController {
     
     //MARK: - Creating IBOutlets and attributes of IntroViewController.
     @IBOutlet weak var introImageView: UIImageView!
