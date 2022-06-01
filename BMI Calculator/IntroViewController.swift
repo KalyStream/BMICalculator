@@ -8,15 +8,12 @@
 import UIKit
 
 class IntroViewController: UIViewController {
-
+    
+    //MARK: - Creating IBOutlets and attributes of IntroViewController.
     @IBOutlet weak var introImageView: UIImageView!
-    
     @IBOutlet weak var nameTextField: UITextField!
-    
     @IBOutlet weak var surnameTextField: UITextField!
-    
     @IBOutlet weak var numberTextField: UITextField!
-    
     @IBOutlet weak var emailTextField: UITextField!
     
     var name: String?
@@ -31,7 +28,7 @@ class IntroViewController: UIViewController {
         warningAlert.addAction(okAction)
     }
     
-
+    //MARK: - Filling user info and transition to MainViewController
     @IBAction func calculaterTapped(_ sender: Any) {
         if let nameText = nameTextField.text {
             name = nameText
@@ -52,7 +49,7 @@ class IntroViewController: UIViewController {
             return
         }
         
-        let mainController = storyboard?.instantiateViewController(withIdentifier: "MainVC") as! ViewController
+        let mainController = storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainViewController
         mainController.modalTransitionStyle = .flipHorizontal
         mainController.modalPresentationStyle = .fullScreen
 

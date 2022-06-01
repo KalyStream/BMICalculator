@@ -9,17 +9,13 @@ import UIKit
 
 
 
-class LastViewController: UIViewController {
+class ResultViewController: UIViewController {
 
-    //MARK: - Creating IBOutlets and attributes of LastViewController
+    //MARK: - Creating IBOutlets and attributes of ResultViewController
     @IBOutlet weak var resultImageView: UIImageView!
-    
     @IBOutlet weak var indicator: UIImageView!
-    
     @IBOutlet weak var infoLabel: UILabel!
-    
     @IBOutlet weak var BMIresultLabel: UILabel!
-    
     @IBOutlet weak var adviceLabel: UILabel!
     
     var textInfo: String?
@@ -46,10 +42,10 @@ class LastViewController: UIViewController {
         //MARK: - Presenting results: indicator, personal info and advice included
         if let safeBMIIndex = BMIIndex {
             if(safeBMIIndex<18.5){
-                adviceLabel.text = "    Being underweight could be a sign you're not eating enough or you may be ill. If you're trying to gain weight, eat foods that are not only healthy but also high in energy. Aim for regular meals and occasional snacks, and base your diet"
+                adviceLabel.text = "    Being underweight could be a sign you're not eating enough or you may be ill. If you're trying to gain weight, eat foods that are not only healthy but also high in energy. Aim for regular meals and occasional snacks, and base your diet."
                 indicator.transform = indicator.transform.rotated(by: CGFloat(Double.pi*1.6))
             } else if(safeBMIIndex>18.5 && safeBMIIndex<24.9){
-                adviceLabel.text = "    Keep up the good work! To maintain a healthy weight, try out the food, diet and fitness"
+                adviceLabel.text = "    Keep up the good work! To maintain a healthy weight, try out the food, diet and fitness."
                 indicator.transform = indicator.transform.rotated(by: CGFloat(Double.pi*1.8))
             } else if (safeBMIIndex>24.9 && safeBMIIndex<29.9){
                 adviceLabel.text = "    The best way to lose weight if you're overweight is through a combination of diet and exercise."

@@ -126,10 +126,10 @@
             </objects>
             <point key="canvasLocation" x="-826.08695652173924" y="65.625"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MainVC" id="BYZ-38-t0r" customClass="ViewController" customModule="BMI_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainVC" id="BYZ-38-t0r" customClass="MainViewController" customModule="BMI_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -487,10 +487,10 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="65.625"/>
         </scene>
-        <!--Last View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="771-CR-84g">
             <objects>
-                <viewController storyboardIdentifier="LastVC" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="odB-AF-cPX" customClass="LastViewController" customModule="BMI_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LastVC" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="odB-AF-cPX" customClass="ResultViewController" customModule="BMI_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kiN-go-UUM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

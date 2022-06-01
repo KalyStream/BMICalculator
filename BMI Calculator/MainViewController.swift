@@ -8,32 +8,21 @@
 import UIKit
 
 
-class ViewController: UIViewController{
+class MainViewController: UIViewController{
 
+    //MARK: - Creating IBOutlets and attributes of MainViewController.
     @IBOutlet weak var femaleButton: UIButton!
-    
     @IBOutlet weak var maleButton: UIButton!
-    
     @IBOutlet weak var heightValueLabel: UILabel!
-        
     @IBOutlet weak var weightValueLabel: UILabel!
-    
     @IBOutlet weak var heightTypeLabel: UILabel!
-    
     @IBOutlet weak var ageValueLabel: UILabel!
-    
     @IBOutlet weak var inchButton: UIButton!
-    
     @IBOutlet weak var cmButton: UIButton!
-    
     @IBOutlet weak var lbsButton: UIButton!
-    
     @IBOutlet weak var kgButton: UIButton!
-    
     @IBOutlet weak var ageValueStepper: UIStepper!
-    
     @IBOutlet weak var weightValueStepper: UIStepper!
-    
     @IBOutlet weak var heightValueSlider: UISlider!
     
     var isLbsClicked = false
@@ -44,7 +33,8 @@ class ViewController: UIViewController{
     var BMI = 0.0
     var gender: String = ""
     
-    let alert = UIAlertController(title: "Incorrect input", message: "Choose metric systems and gender", preferredStyle: .alert)
+    // Initializing alert, that shows warning message about incorrect input
+    let alert = UIAlertController(title: "Incorrect input", message: "Choose metric systems and gender, inch-lbs, cm-kg", preferredStyle: .alert)
     let okAction = UIAlertAction(title: "OK", style: .default)
     var weightType: String = ""
     var personalInfo: String = "Empty"
@@ -54,7 +44,7 @@ class ViewController: UIViewController{
         alert.addAction(okAction)
     }
     
-  
+    //MARK: - Adding actions to buttons, BMICalculator configuration.
     @IBAction func femaleButtonClicked(_ sender: Any) {
         femaleButton.setImage(UIImage(named: "femaleIconTapped")!, for: .normal)
         maleButton.setImage(UIImage(named: "maleIcon")!, for: .normal)
@@ -112,7 +102,7 @@ class ViewController: UIViewController{
     }
        
     @IBAction func calculateBMI(_ sender: UIButton) {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "LastVC") as! LastViewController
+        let controller = storyboard?.instantiateViewController(withIdentifier: "LastVC") as! ResultViewController
         controller.modalPresentationStyle = .fullScreen
         controller.modalTransitionStyle = .flipHorizontal
         controller.textInfo = personalInfo
